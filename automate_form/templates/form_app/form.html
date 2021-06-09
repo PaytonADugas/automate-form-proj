@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FORM</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+      .label{
+        margin-top: 20px;
+      }
+      .jumbotron{
+        margin-top: 50px;
+      }
+      .title{
+        margin-top: 70px;
+      }
+      h2{
+        margin: 20px;
+      }
+    </style>
+
+  </head>
+  <body>
+      <h1>Hello!</h1>
+    <div class="form-group">
+      <div class="container">
+        <div class="jumbotron">
+          <h1 style='text-align:center'>North County Christian School Registration Form</h1>
+          <form method="post">
+            <div class="student_information title">
+              <h2> <b>Student Information</b></h2>
+              <hr>
+              <label class='label'>Student Last Name:</label>
+              {{ student_form.first_name }}
+              <label class='label'>Student First Name:</label>
+              {{ student_form.last_name }}
+              <label class='label'>Student Birth Date:</label>
+              {{ student_form.birth_date }}
+              <label class='label'>Student Age:</label>
+              {{ student_form.age }}
+              <label class='label'>Student Gender:</label>
+              {{ student_form.gender }}
+              <label class='label'>Has student had any academic, physical and/or learning disabilities or problems?</label>
+              {{ student_form.disabilities }}
+            </div>
+
+            <div class="academic_information title">
+              <h2> <b>Academic Information</b></h2>
+              <hr>
+              <label class='label'>School Year:</label>
+              {{ student_form.school_year }}
+              <label class='label'>Grade</label>
+              {{ student_form.grade }}
+            </div>
+
+            <div class="academic_records title">
+              <h2> <b>Academic Records</b></h2>
+              <hr>
+              <label class='label'>We give permission to have our student's record requested from their previous school?</label>
+              {{ student_form.record_permission }}
+              <label class='label'>Previous School Year:</label>
+              {{ student_form.previous_school_year }}
+              <label class='label'>Previous School:</label>
+              {{ student_form.previous_school }}
+              <label class='label'>Previous School Mailing Address:</label>
+              {{ student_form.previous_school_mailing_address }}
+              <label class='label'>City:</label>
+              {{ student_form.previous_school_city }}
+              <label class='label'>State:</label>
+              {{ student_form.previous_school_state }}
+              <label class='label'>Zip:</label>
+              {{ student_form.previous_school_zip }}
+              <label class='label'>Previous School Phone:</label>
+              {{ student_form.previous_school_phone }}
+              <label class='label'>Has your student ever been suspended, expelled or charged with truancy?</label>
+              {{ student_form.previous_school_been_suspended }}
+            </div>
+
+            <div class="family_information title">
+              <h2> <b>Family Information</b></h2>
+              <hr>
+              <label class='label'>Father's Full Name:</label>
+              {{ student_form.father_name }}
+              <label class='label'>Father's Place of Employment:</label>
+              {{ student_form.father_employment }}
+              <label class='label'>Mother's Full Name:</label>
+              {{ student_form.mother_name }}
+              <label class='label'>Mother's Place of Employment:</label>
+              {{ student_form.mother_employment }}
+              <label class='label'>Family Street Address:</label>
+              {{ student_form.family_address }}
+              <label class='label'>City:</label>
+              {{ student_form.family_city }}
+              <label class='label'>State:</label>
+              {{ student_form.family_state }}
+              <label class='label'>Zip:</label>
+              {{ student_form.family_zip }}
+              <label class='label'>Phone:</label>
+              {{ student_form.family_phone }}
+              <label class='label'>Email:</label>
+              {{ student_form.family_email }}
+              <label class='label'>With whom is the student currently living?</label>
+              {{ student_form.student_living_with }}
+              <label class='label'>Whos is the student's legal guardian?</label>
+              {{ student_form.student_guardian }}
+              <label class='label'>Church family attends:</label>
+              {{ student_form.family_church }}
+            </div>
+
+            <div class="HSLDA_information title">
+              <h2> <b>HSLDA Information</b></h2>
+              <hr>
+              <label class='label'>Do you hold Home School Legal Defense Association membership?</label>
+              {{ student_form.HSLDA_membership }}
+            </div>
+
+            <div class="faculty_information title">
+              <h2> <b>Faculty Information</b></h2>
+              <hr>
+              <label class='label'>Who will be the primary teacher, at home with the student, during school hours?</label>
+              {{ student_form.primary_teacher }}
+              <label class='label'>High School Eduication?</label>
+              {{ student_form.high_school_eduication }}
+              <label class='label'>College Eduication?</label>
+              {{ student_form.college_eduication }}
+              <label class='label'>List teacher training or other education related training:</label>
+              {{ student_form.list_training }}
+            </div>
+
+            <div class="parental-responsibility_agreement title">
+              <h2> <b>Parental Responsibility Agreement</b></h2>
+              <p>North County Christian School requires both parents to agree to and follow through with these responsibilities in teaching their children at home. Read through this agreement, sign & date.</p>
+              <hr>
+              <label class='label'>We will apply to HSLDA for membership OR we will renew our HSLDA membership each year that we are enrolled in NCCS.</label>
+              {{ student_form.membership_agreement }}
+              <label class='label'>We will provide curriculum for student in compliance with state guidelines for subjects to be taught. </label>
+              {{ student_form.curriculum_agreement }}
+              <label class='label'>We understand the importance of accurate record keeping and agree to maintain a daily lesson plan book that records what was accomplished in each subject and we will keep these records for, at least, a two year period.</label>
+              {{ student_form.record_keeping_agreement }}
+              <label class='label'>We understand it is the parent’s responsibility to provide curriculum, do lesson planning, maintain a record of daily work, evaluate our student’s progress and that all decisions relating to educational philosophy and methods, style, selection of books, teaching material and curriculum, grading and evaluations are our responsibility. Therefore, the outcome of your student’s education rests on your efforts and that of your students.</label>
+              {{ student_form.parent_participation_agreement }}
+              <label class='label'>One parent will be at home during school hours and teaching our student in an orderly and systematic manner, at least 180 days of the year. </label>
+              {{ student_form.parent_home_agreement }}
+              <label class='label'>We will enter attendance and grades at the times specified on the school calendar, realizing that timely attendance reporting is absolutely essential in an independent study program. </label>
+              {{ student_form.attendance_grades_agreement }}
+              <label class='label'>We will post our elementary student’s proposed course of study and/or high school student’s course description on their report card page at the beginning of the school year.</label>
+              {{ student_form.course_of_study_course_description_agreement }}
+              <label class='label'>We understand that the School Calendar, NCCS Handbook, and the NCCS High School Manual have important dates and information that we need to know in order to work responsibly with NCCS. We agree to read through the Handbook/Manual and review the school calendar and acquainted ourselves with the school services and our responsibilities.</label>
+              {{ student_form.read_handbook_agreement }}
+              <label class='label'>We will notify NCCS if and when we enroll our student in another school as a matter of courtesy. </label>
+              {{ student_form.change_schools_agreement }}
+              <label class='label'>We realize that our student will be dismissed from enrollment if: 1) We fail to do our record keeping in accordance with the NCCS Handbook. 2) We fail to comply with Parental Responsibility Agreement in any way. </label>
+              {{ student_form.enrolment_dismissal_agreement }}
+              <label class='label'>Although we believe it is the parent’s responsibility to direct their student’s education we have policies that may conflict with some family’s strategy. We feel these policies help support the integrity of North County Christian School. We will attempt to accommodate each parent’s philosophy and goals as much as possible. </label>
+              {{ student_form.parent_direction_agreement }}
+            </div>
+
+            <div class="signature title">
+              <h2> <b>Signature</b></h2>
+              <hr>
+              <label class='label'>We have read through the Parental Responsibility Agreement, understand the requirements that pertain to us and our student, and agree to comply with them while we have our student enrolled in NCCS.</label>
+              {{ student_form.read_agreement }}
+              <label class='label'>Father's Signature:</label>
+              {{ student_form.father_signature }}
+              <label class='label'>Date</label>
+              {{ student_form.father_sign_date }}
+              <label class='label'>Mother's Signature</label>
+              {{ student_form.mother_signature }}
+              <label class='label'>Date</label>
+              {{ student_form.mother_sign_date }}
+              <p class='title'>Typing in your name and date is acknowledging your agreement and compliance with the Parental Responsibility Agreement.</p>
+              <p>If this is not complete enrollment will not be processed.</p>
+            </div>
+            {% csrf_token %}
+            <input type="submit" name="btn btn-primary" value='Submit'></input>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

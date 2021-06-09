@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <h1>HELLO!</h1>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 style='text-align: center ; margin-bottom: 50px'>Welcome to NCCS basic form page</h1>
+
+        <a href="{% url 'form_app:form' %}" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">Regestration</a>
+        <a href="{% url 'form_app:display' %}" class="btn btn-secondary btn-lg btn-block" role="button" aria-pressed="true">Submitted Forms</a>
+
+      </div>
+    </div>
+  </body>
+</html>

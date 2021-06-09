@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DISPLAY</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Submitted Forms</h1>
+        <hr>
+
+        <table>
+          <head>
+            <th>Name</th>
+          </head>
+          {% for student in students %}
+            <tr>
+              <td><a href="{% url 'form_app:student' slug=student.first_name %}">{{ student }}<a></td>
+            </tr>
+          {% endfor %}
+        </table>
+
+      </div>
+
+    </div>
+  </body>
+</html>
